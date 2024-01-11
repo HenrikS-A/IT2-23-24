@@ -1,0 +1,252 @@
+[
+  {
+    "navn": "greedy",
+    "artist": "Tate McRae",
+    "bilde_url": "https://i.scdn.co/image/ab67616d00001e0222fd802bc61db666c7c81aa8"
+  },
+  {
+    "navn": "La Diabla",
+    "artist": "Xavi",
+    "bilde_url": "https://i.scdn.co/image/ab67616d00001e021501c770de50a22b25d67611"
+  },
+  {
+    "navn": "Lovin On Me",
+    "artist": "Jack Harlow",
+    "bilde_url": "https://i.scdn.co/image/ab67616d00001e02fcf4adae77baba5d0169e8e8"
+  },
+  {
+    "navn": "Cruel Summer",
+    "artist": "Taylor Swift",
+    "bilde_url": "https://i.scdn.co/image/ab67616d00001e02e787cffec20aa2a396a61647"
+  },
+  {
+    "navn": "My Love Mine All Mine",
+    "artist": "Mitski",
+    "bilde_url": "https://i.scdn.co/image/ab67616d00001e0234f21d3047d85440dfa37f10"
+  },
+  {
+    "navn": "One Of The Girls (with JENNIE, Lily Rose Depp)",
+    "artist": "The Weeknd",
+    "bilde_url": "https://i.scdn.co/image/ab67616d00001e02b0dd6a5cd1dec96c4119c262"
+  },
+  {
+    "navn": "Seven (feat. Latto) (Explicit Ver.)",
+    "artist": "Jung Kook",
+    "bilde_url": "https://i.scdn.co/image/ab67616d00001e02741fd4807f442af3f7359316"
+  },
+  {
+    "navn": "Paint The Town Red",
+    "artist": "Doja Cat",
+    "bilde_url": "https://i.scdn.co/image/ab67616d00001e02a840032f14ab22da396e43cb"
+  },
+  {
+    "navn": "La V\u00edctima",
+    "artist": "Xavi",
+    "bilde_url": "https://i.scdn.co/image/ab67616d00001e020e8dc9720dd03d86627fa54b"
+  },
+  {
+    "navn": "BELLAKEO",
+    "artist": "Peso Pluma",
+    "bilde_url": "https://i.scdn.co/image/ab67616d00001e026601556a0f7c0b54ded13c9d"
+  },
+  {
+    "navn": "Stick Season",
+    "artist": "Noah Kahan",
+    "bilde_url": "https://i.scdn.co/image/ab67616d00001e026ee35072df1af802cca09918"
+  },
+  {
+    "navn": "Water",
+    "artist": "Tyla",
+    "bilde_url": "https://i.scdn.co/image/ab67616d00001e02d20231861e86a6f74ef2393e"
+  },
+  {
+    "navn": "Strangers",
+    "artist": "Kenya Grace",
+    "bilde_url": "https://i.scdn.co/image/ab67616d00001e024756c2e9ae436437cd75e9f3"
+  },
+  {
+    "navn": "PERRO NEGRO",
+    "artist": "Bad Bunny",
+    "bilde_url": "https://i.scdn.co/image/ab67616d00001e027b1fc51ff3257b5286a1ecec"
+  },
+  {
+    "navn": "QLONA",
+    "artist": "KAROL G",
+    "bilde_url": "https://i.scdn.co/image/ab67616d00001e02d026bf9d7780f6a1267b4d03"
+  },
+  {
+    "navn": "Standing Next to You",
+    "artist": "Jung Kook",
+    "bilde_url": "https://i.scdn.co/image/ab67616d00001e02741fd4807f442af3f7359316"
+  },
+  {
+    "navn": "I Wanna Be Yours",
+    "artist": "Arctic Monkeys",
+    "bilde_url": "https://i.scdn.co/image/ab67616d00001e024ae1c4c5c45aabe565499163"
+  },
+  {
+    "navn": "LUNA",
+    "artist": "Feid",
+    "bilde_url": "https://i.scdn.co/image/ab67616d00001e02f1aad814a40ec7419c234242"
+  },
+  {
+    "navn": "Que Onda",
+    "artist": "Calle 24",
+    "bilde_url": "https://i.scdn.co/image/ab67616d00001e02c8fd4190e32eed2dfcd00f66"
+  },
+  {
+    "navn": "HARLEY QUINN",
+    "artist": "Fuerza Regida",
+    "bilde_url": "https://i.scdn.co/image/ab67616d00001e02ad57982065339f7dc2058efe"
+  },
+  {
+    "navn": "Popular (with Playboi Carti & Madonna) - Music from the HBO Original Series",
+    "artist": "The Weeknd",
+    "bilde_url": "https://i.scdn.co/image/ab67616d00001e024c8f092adc59b4bf4212389d"
+  },
+  {
+    "navn": "Si No Est\u00e1s",
+    "artist": "i\u00f1igo quintero",
+    "bilde_url": "https://i.scdn.co/image/ab67616d00001e025cb9531348f45311cd6fb8df"
+  },
+  {
+    "navn": "vampire",
+    "artist": "Olivia Rodrigo",
+    "bilde_url": "https://i.scdn.co/image/ab67616d00001e02e85259a1cae29a8d91f2093d"
+  },
+  {
+    "navn": "Agora Hills",
+    "artist": "Doja Cat",
+    "bilde_url": "https://i.scdn.co/image/ab67616d00001e02a840032f14ab22da396e43cb"
+  },
+  {
+    "navn": "As It Was",
+    "artist": "Harry Styles",
+    "bilde_url": "https://i.scdn.co/image/ab67616d00001e022e8ed79e177ff6011076f5f0"
+  },
+  {
+    "navn": "Starboy",
+    "artist": "The Weeknd",
+    "bilde_url": "https://i.scdn.co/image/ab67616d00001e024718e2b124f79258be7bc452"
+  },
+  {
+    "navn": "Kill Bill",
+    "artist": "SZA",
+    "bilde_url": "https://i.scdn.co/image/ab67616d00001e020c471c36970b9406233842a5"
+  },
+  {
+    "navn": "Dance The Night - From Barbie The Album",
+    "artist": "Dua Lipa",
+    "bilde_url": "https://i.scdn.co/image/ab67616d00001e027dd3ba455ee3390cb55b0192"
+  },
+  {
+    "navn": "Daylight",
+    "artist": "David Kushner",
+    "bilde_url": "https://i.scdn.co/image/ab67616d00001e0295ca6a9b4083a86c149934ae"
+  },
+  {
+    "navn": "Flowers",
+    "artist": "Miley Cyrus",
+    "bilde_url": "https://i.scdn.co/image/ab67616d00001e02cd222052a2594be29a6616b5"
+  },
+  {
+    "navn": "Seg\u00fan Qui\u00e9n",
+    "artist": "Maluma",
+    "bilde_url": "https://i.scdn.co/image/ab67616d00001e02d688b951a19f48941682e026"
+  },
+  {
+    "navn": "Prada",
+    "artist": "cass\u00f6",
+    "bilde_url": "https://i.scdn.co/image/ab67616d00001e02e4b7dccdfd54375ded9ccc5c"
+  },
+  {
+    "navn": "What Was I Made For? [From The Motion Picture \"Barbie\"]",
+    "artist": "Billie Eilish",
+    "bilde_url": "https://i.scdn.co/image/ab67616d00001e02ed317ec13d3de9e01fb99c9e"
+  },
+  {
+    "navn": "MONACO",
+    "artist": "Bad Bunny",
+    "bilde_url": "https://i.scdn.co/image/ab67616d00001e027b1fc51ff3257b5286a1ecec"
+  },
+  {
+    "navn": "Houdini",
+    "artist": "Dua Lipa",
+    "bilde_url": "https://i.scdn.co/image/ab67616d00001e02001d5706fddc72561f6488af"
+  },
+  {
+    "navn": "Surround Sound (feat. 21 Savage & Baby Tate)",
+    "artist": "JID",
+    "bilde_url": "https://i.scdn.co/image/ab67616d00001e02cae6e44dcc84e2035c3ad092"
+  },
+  {
+    "navn": "Blinding Lights",
+    "artist": "The Weeknd",
+    "bilde_url": "https://i.scdn.co/image/ab67616d00001e028863bc11d2aa12b54f5aeb36"
+  },
+  {
+    "navn": "Rompe La Dompe",
+    "artist": "Peso Pluma",
+    "bilde_url": "https://i.scdn.co/image/ab67616d00001e02a7a330bed7c3b2217e3be9a8"
+  },
+  {
+    "navn": "LALA",
+    "artist": "Myke Towers",
+    "bilde_url": "https://i.scdn.co/image/ab67616d00001e020656d5ce813ca3cc4b677e05"
+  },
+  {
+    "navn": "I'm Good (Blue)",
+    "artist": "David Guetta",
+    "bilde_url": "https://i.scdn.co/image/ab67616d00001e02933c036cd61cd40d3f17a9c4"
+  },
+  {
+    "navn": "I Remember Everything (feat. Kacey Musgraves)",
+    "artist": "Zach Bryan",
+    "bilde_url": "https://i.scdn.co/image/ab67616d00001e02e5a25ed08d1e7e0fbb440cef"
+  },
+  {
+    "navn": "3D (feat. Jack Harlow)",
+    "artist": "Jung Kook",
+    "bilde_url": "https://i.scdn.co/image/ab67616d00001e0299583bb32b47e87d55c6064b"
+  },
+  {
+    "navn": "LADY GAGA",
+    "artist": "Peso Pluma",
+    "bilde_url": "https://i.scdn.co/image/ab67616d00001e022fb583ed96f8f35cbf2897ba"
+  },
+  {
+    "navn": "The Night We Met",
+    "artist": "Lord Huron",
+    "bilde_url": "https://i.scdn.co/image/ab67616d00001e029d2efe43d5b7ebc7cb60ca81"
+  },
+  {
+    "navn": "Snooze",
+    "artist": "SZA",
+    "bilde_url": "https://i.scdn.co/image/ab67616d00001e0270dbc9f47669d120ad874ec1"
+  },
+  {
+    "navn": "Die For You",
+    "artist": "The Weeknd",
+    "bilde_url": "https://i.scdn.co/image/ab67616d00001e02a048415db06a5b6fa7ec4e1a"
+  },
+  {
+    "navn": "EL AMOR DE SU VIDA",
+    "artist": "Grupo Frontera",
+    "bilde_url": "https://i.scdn.co/image/ab67616d00001e0282ce4c7bbf861185252e82ae"
+  },
+  {
+    "navn": "Love Me Again",
+    "artist": "V",
+    "bilde_url": "https://i.scdn.co/image/ab67616d00001e022f1a5b69c2bd76474bca8035"
+  },
+  {
+    "navn": "fukumean",
+    "artist": "Gunna",
+    "bilde_url": "https://i.scdn.co/image/ab67616d00001e02017d5e26552345c4b1575b6c"
+  },
+  {
+    "navn": "Calm Down (with Selena Gomez)",
+    "artist": "Rema",
+    "bilde_url": "https://i.scdn.co/image/ab67616d00001e02963265801aa5c9740ad159b7"
+  }
+]

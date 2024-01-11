@@ -34,11 +34,26 @@ ENDFUNCTION
 SET totalsum TO 0
 SET i TO 0
 FOR hver i LESSER THAN OR EQUAL TO 10
-    tn = CALL trekanttall (i) """"RETURNING tn""""
-    INCREMENT totalsum BY tn
-    INCREMENT i
+    CALL trekanttall (i) RETURNING nytt trekanttall
+    INCREMENT totalsum BY nytt trekanttall
 ENDFOR
 
 DISPLAY totalsum
 
 ```
+
+## Oppg. 9:
+- Svar: 4
+
+## Oppg. 10:
+- Svar:
+  F-1,
+  H-2,
+  A-3,
+  B-4,
+  C-5,
+  G-6,
+  E-7,
+  D-8,
+
+
