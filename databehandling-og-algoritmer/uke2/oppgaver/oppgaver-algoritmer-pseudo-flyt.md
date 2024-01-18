@@ -56,4 +56,20 @@ DISPLAY totalsum
   E-7,
   D-8,
 
+## Oppg. 11:
+- A:
+  - Svar: A, D
+- B:
+  - Svar: Svaralternativ D foretrekker jeg. Mye kortere og simplere algoritme, og den avslutter med en gang den finner det nest siste tallet uten å gå gjennom hele listen uten grunn.
+
+## Oppg. 12:
+- A:
+  - Svar: 3
+- B:
+  - Svar: -
+
+
+
+
+
 
