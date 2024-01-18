@@ -8,3 +8,4 @@
 
 - [1. Algoritmer, pseudokode og flytdiagram](./uke1)
 - [2. Algoritmer, pseudokode og flytdiagram](./uke2)
+- [3. Algoritmer, pseudokode og flytdiagram](./uke3)
