@@ -1,5 +1,5 @@
 # IT2 - 23/24
-Mappene mine fra IT2, Sandvika VGS
+Mappene mine fra IT2 ved Sandvika VGS
 
 
 ## Viktige datoer
@@ -13,7 +13,7 @@ Mappene mine fra IT2, Sandvika VGS
 
 | Ukenr   | Emne                                                                     | Kommentar                 |
 | ------- | ------------------------------------------------------------------------ | ------------------------- |
-| 1 - 6   | [Databehandling og algoritmer](IT2-23-24/databehandling-og-algoritmer/readme.md) |                           |
+| 1 - 6   | [Databehandling og algoritmer](databehandling-og-algoritmer/readme.md) |                           |
 | 7 - 14  | Mappearbeid - spill/app                                                  |                           |
 | 15 - 18 | Større oppgaver og tentamen                                              |                           |
 | 19 - 22 | Forberedelse skriftlig eksamen                                           | Skriftlig eksamen 31. mai |

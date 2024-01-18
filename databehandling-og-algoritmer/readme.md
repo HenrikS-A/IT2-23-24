@@ -4,8 +4,8 @@
 
 - 1. feb: Prøve
 
-## Plan
+## Ukentlig innhold
 
-- [1. Algoritmer, pseudokode og flytdiagram](./uke1)
-- [2. Algoritmer, pseudokode og flytdiagram](./uke2)
-- [3. Algoritmer, pseudokode og flytdiagram](./uke3)
+- Uke 1: [Intro algoritmer, pseudokode og flytdiagram](./uke1)
+- Uke 2: [Psaudokode, flytdiagram og filhåndtering](./uke2)
+- Uke 3: [Algoritmer og databehandling](./uke3)
