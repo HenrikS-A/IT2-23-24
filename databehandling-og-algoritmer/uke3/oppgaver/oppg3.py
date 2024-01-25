@@ -12,6 +12,7 @@ Merk: Anbefaler å bruke fullskjermsmodus på vinduet jeg plotter og visualisere
 
 import json
 import matplotlib.pyplot as plt
+import numpy as np
 
 with open("Global YouTube Statistics.json", encoding="utf-8") as fil:
     kanaler = json.load(fil)
@@ -58,10 +59,44 @@ plt.show()
 
 
 
-
 # Del 2:
 
+topp_10_subscriber_avg = []
+topp_10_visninger_avg = []
+
+for i, land in enumerate(topp_10_land):
+    land_subscribers = 0
+    land_visninger = 0
+    for kanal in kanalene:
+        if kanal["Country"] == land:
+            land_subscribers += kanal["subscribers"]
+            land_visninger += kanal["video views"]
+
+    sub_avg = land_subscribers / topp_10_kanalantall[i]
+    topp_10_subscriber_avg.append(round(sub_avg, 1))
+
+    visning_avg = land_visninger / topp_10_kanalantall[i]
+    topp_10_visninger_avg.append(round(visning_avg, 1))
 
 
 
+"""
+Dette kan jeg gjøre for å få to stolper pr. x-verdi.
+Men her fungerer det ikke fordi det er ekstremt mange flere views enn subscribers, så man ser ikke begge stolpene samtidig.
+"""
+# x_akse = np.arange(len(topp_10_land))
+
+# plt.bar(x_akse - 0.2, topp_10_subscriber_avg, 0.4, label="gjennomsnitt abonnenter") 
+# plt.bar(x_akse + 0.2, topp_10_visninger_avg, 0.4, label="gjennomsnitt videovisninger") 
+
+# plt.legend()
+# plt.show()
+
+
+
+plt.bar(topp_10_land, topp_10_subscriber_avg)
+plt.show()
+
+plt.bar(topp_10_land, topp_10_visninger_avg)
+plt.show()
 
