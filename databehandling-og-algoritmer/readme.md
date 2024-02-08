@@ -2,7 +2,7 @@
 
 ## Viktig dato
 
-- 1. feb: Prøve
+- 8. feb (uke 6): Prøve
 
 ## Ukentlig innhold
 
@@ -11,3 +11,4 @@
 - Uke 3: [Algoritmer og databehandling](./uke3)
 - Uke 4: [Løkker, filhåndtering og større oppgaver](./uke4/)
 - Uke 5: [Plotting og øveprøve (og litt flask)](./uke5)
+- Uke 6: [PRØVE (og nrk case oppgave)](./uke6-prove/)

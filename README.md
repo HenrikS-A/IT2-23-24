@@ -4,7 +4,7 @@ Mappene mine fra IT2 ved Sandvika VGS
 
 ## Viktige datoer
 
-- 8. feb: Prøve i databehandling og algroritmer
+- 8. feb (uke 6): Prøve i databehandling og algroritmer
 - 29. feb - 7. mar: Prosjekt ??
 - 21. mar: Skrivedag om etiske problemer
 - 5. apr: Mappeinnlevering - spill og/eller applikasjon
