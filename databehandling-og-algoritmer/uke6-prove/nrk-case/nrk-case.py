@@ -33,25 +33,15 @@ def hent_repoer(bruker: str, brukertype):
     return data
 
 bruker = input("Skriv inn et brukernavn eller organisasjonsnavn \n >")
-
-brukertype = bestem_brukertype(bruker) # Eks: "octocat" / "Microsoft"
+brukertype = bestem_brukertype(bruker) # Eks: "HenrikS-A" / "Microsoft"
 repoer = hent_repoer(bruker, brukertype)
 
-# --
-json_objekt = json.dumps(repoer, indent=4)
-with open("info.json", "w") as fil:
-    fil.write(json_objekt)
-# --
-    
-
 print(f"\nRepoene til {bruker}:")
-
 for repo in repoer:
     utskrift_beskrivelser = ["Navn", "URL", "Beskrivelse", "Temaer", "Lisens navn", "Programmeringsspråk"]
     utskrifter = [repo["name"], repo['html_url'], repo['description'], repo['topics'], repo["license"], repo["language"]]
     
-    
-    utskrifter = [utskrift if utskrift != None and utskrift != [] else "-" for utskrift in utskrifter]
+    utskrifter = [utskrift if utskrift is not None and utskrift != [] else "-" for utskrift in utskrifter]
     # Dette gjør det samme som one-lineren over:
     # utskrifter_placeholder = []
     # for utskrift in utskrifter:
@@ -59,7 +49,6 @@ for repo in repoer:
     #         utskrifter_placeholder.append(utskrift)
     #     else:
     #         utskrifter_placeholder.append("-")
-
 
     for i, utskrift in enumerate(utskrifter):
         if i == 0:
