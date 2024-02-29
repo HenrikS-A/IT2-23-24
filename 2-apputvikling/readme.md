@@ -8,4 +8,4 @@
 ## Ukentlig innhold
 
 - Uke 7: [Politiker fantasy](./uke7)
-- Uke 9
+- Uke 9: [Assosiasjoner OOP](./uke9)
