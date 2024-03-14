@@ -3,7 +3,6 @@
 ## Viktige datoer
 
 - Skrivedag etiske dilemmaer 21. mars (uke 12)
-- Mappeinnlevering 5. april (uke 14)
 
 ## Ukentlig innhold
 
