@@ -33,4 +33,4 @@ def hent_naaverende_pos(forertall: int):
     url = f"https://api.openf1.org/v1/position?meeting_key=latest&session_key=latest&driver_number={forertall}"
     respons = requests.get(url, timeout=10)
     data = respons.json()
-    return data[-1]
+    return data[-1]["position"]
