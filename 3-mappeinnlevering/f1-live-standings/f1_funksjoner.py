@@ -22,15 +22,42 @@ def hent_plasseringer() -> list[str, int]:
 
 
 def hent_forertall(etternavn: str):
-    url = f"https://api.openf1.org/v1/drivers?meeting_key=latest&session_key=latest&last_name={etternavn}"
+    url = f"https://api.openf1.org/v1/drivers?last_name={etternavn}"
     respons = requests.get(url, timeout=10)
     data = respons.json()
     forer_tall = data[0]["driver_number"]
     return forer_tall
 
+def hent_forernavn(forertall: str):
+    url = f"https://api.openf1.org/v1/drivers?driver_number={forertall}"
+    respons = requests.get(url, timeout=10)
+    data = respons.json()
+    forer_navn = data[0]["last_name"]
+    return forer_navn
+     
+
 
 def hent_naaverende_pos(forertall: int):
+    
     url = f"https://api.openf1.org/v1/position?meeting_key=latest&session_key=latest&driver_number={forertall}"
     respons = requests.get(url, timeout=10)
     data = respons.json()
-    return data[-1]["position"]
+    if len(data) > 0:
+        return data[-1]["position"]
+    return 20
+
+
+def hent_raskeste_runde():
+    url = f"https://api.openf1.org/v1/laps?meeting_key=latest&session_key=latest"
+    respons = requests.get(url, timeout=10)
+    data = respons.json()
+    
+    runder = []
+    for runde in data:
+        if runde["is_pit_out_lap"] or runde["lap_duration"] is None:
+            continue
+        runder.append({"forer": runde["driver_number"], "rundetid": runde["lap_duration"]})
+
+    runder_sortert = sorted(runder, key=lambda runde: runde["rundetid"])
+
+    return runder_sortert[0]["forer"]
