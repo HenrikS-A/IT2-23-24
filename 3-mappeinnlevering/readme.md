@@ -8,5 +8,5 @@
 
 ## Ukentlig innhold
 
-- Uke 11: [Testing + mappeinnlevering](./uke11)
+- Uke 11: [Testing + mappeinnlevering (+f1-stilling-app)](./uke11)
 - 

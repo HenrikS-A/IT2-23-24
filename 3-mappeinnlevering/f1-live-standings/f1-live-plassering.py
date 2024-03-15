@@ -45,12 +45,9 @@ while True:
     # Presenterer førermesterskapet
     rens_terminal()
     for i, forer in enumerate(direkte_plasseringer):
-        print(f"{i+1}.\t {direkte_plasseringer[forer]} - {forer}, ")
+        print(f"{i+1}.\t {direkte_plasseringer[forer]} - {forer}")
 
     print()
     for _ in range(5):
         time.sleep(2)
-        print("o", end=" ", flush=True) # flush=True forsikrer om at printen blir 'flushed' med en gang slik at den blir vist på skjermen.
-        
-        
-    
+        print(".", end=" ", flush=True) # flush=True forsikrer om at printen blir 'flushed' med en gang slik at den blir vist på skjermen.
