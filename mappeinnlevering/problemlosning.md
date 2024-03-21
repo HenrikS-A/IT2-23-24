@@ -19,7 +19,7 @@ DONE - Lim inn lenke til github-repository (side på github) med relevant kode
 **Gjøremål:**
 - Ha en presentasjon der du begrunner valg som er gjort i et prosjekt og vurderer alternative løsninger
 
-Plan: Presentere et nytt prosjekt jeg skal lage før 26. april!
+Plan: Presentere et nytt prosjekt som jeg skal lage før 26. april!
 
 TODO Hold presentasjon der du presnterer ett eller flere prosjekter
 
