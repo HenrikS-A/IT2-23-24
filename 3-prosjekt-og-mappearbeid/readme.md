@@ -1,4 +1,4 @@
-# Apputvikling
+# Prosjekt- og mappearbeid
 
 ## Viktige datoer
 
@@ -9,4 +9,4 @@
 ## Ukentlig innhold
 
 - Uke 11: [Testing + mappeinnlevering (+f1-stilling-app)](./uke11)
-- 
+- Uke 12: [Skrivedag + arbeid med mappen](./uke12/)

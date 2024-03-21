@@ -1,0 +1,9 @@
+# Oppgaver (kopiert fra fil der oppgavene hadde andre oppgavenavn)
+
+## Oppg. 2.5:
+- Flytdiagrammet:
+
+![flytdiagram](oppg-7-flytdiagram.png)
+
+## Oppg. 2.6:
+- Svar: 1, 3

@@ -11,12 +11,16 @@ Mappene mine fra IT2 ved Sandvika VGS
 - 25. apr: Tentamen
 - 31. mai: evt. Skriftlig eksamen
 
+## Mappeinnlevering
+[Mappen](./mappeinnlevering/readme.md)
+
 ## Plan
 
 | Ukenr   | Emne                                                                      | Kommentar                 |
 | ------- | ------------------------------------------------------------------------- | ------------------------- |
 | 1 - 6   | [Databehandling og algoritmer](/1-databehandling-og-algoritmer/readme.md) |                           |
-| 7 - 14  | [Apputvikling, mappearbeid -> spill/app](/2-apputvikling/readme.md)        |                           |
+| 7 - 9   | [Apputvikling, mappearbeid -> spill/app](/2-apputvikling/readme.md)       |                           |
+| 10 - 14 | [Prosjekt- og mappearbeid](/3-prosjekt-og-mappearbeid/readme.md)          |                           |
 | 15 - 18 | Større oppgaver og tentamen                                               |                           |
 | 19 - 22 | Forberedelse skriftlig eksamen                                            | Skriftlig eksamen 31. mai |
 | 22 - 23 | Forberedelse muntlig eksamen                                              | Muntlig eksamen uke 24    |
