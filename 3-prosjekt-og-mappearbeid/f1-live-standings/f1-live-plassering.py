@@ -41,11 +41,13 @@ while True:
     raskeste_runde_forer = hent_raskeste_runde()
     direkte_plasseringer[hent_forernavn(raskeste_runde_forer)] += 1
 
+    # Sorterer i stigende rekkefølge
+    sortert_plasseringer = dict(sorted(direkte_plasseringer.items(), key=lambda forer_poeng: forer_poeng[1], reverse=True))
 
     # Presenterer førermesterskapet
     rens_terminal()
-    for i, forer in enumerate(direkte_plasseringer):
-        print(f"{i+1}.\t {direkte_plasseringer[forer]} - {forer}")
+    for i, forer in enumerate(sortert_plasseringer):
+        print(f"{i+1}.\t {sortert_plasseringer[forer]} - {forer}")
 
     print()
     for _ in range(5):
