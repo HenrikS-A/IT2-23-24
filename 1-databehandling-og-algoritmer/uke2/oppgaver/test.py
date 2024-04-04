@@ -68,6 +68,3 @@ for i in range(0, 5):
             bytt_plass(i)
 
 print(a)
-
-
-

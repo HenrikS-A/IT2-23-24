@@ -12,7 +12,7 @@ Mappene mine fra IT2 ved Sandvika VGS
 - 31. mai: evt. Skriftlig eksamen
 
 ## Mappeinnlevering
-[Mappen](./mappeinnlevering/readme.md)
+[Mappen](https://github.com/HenrikS-A/IT2-mappeinnlevering)
 
 ## Plan
 

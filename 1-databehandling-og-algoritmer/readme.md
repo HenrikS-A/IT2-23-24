@@ -4,6 +4,9 @@
 
 - 8. feb (uke 6): Prøve
 
+## Oppgaveoversikt (ryddet opp i gamle oppgavenavn)
+- [2.1-2.17](./oppgaver_oversikt/)
+
 ## Ukentlig innhold
 
 - Uke 1: [Intro algoritmer, pseudokode og flytdiagram](./uke1)
