@@ -16,6 +16,8 @@ def hent_plasseringer() -> list[str, int]:
         navn = rad.find("td", class_="").find("a").find("span", class_="hide-for-mobile").get_text()
         poeng = rad.find("td", class_="dark bold").get_text()
         gammel_forer_plassering[navn] = int(poeng)
+
+    print("Hallo1")
     
     return gammel_forer_plassering
 
@@ -24,6 +26,7 @@ def hent_forertall(etternavn: str):
     respons = requests.get(url, timeout=10)
     data = respons.json()
     forer_tall = data[0]["driver_number"]
+    print("Hallo2")
     return forer_tall
 
 def hent_forernavn(forertall: str):
@@ -31,6 +34,7 @@ def hent_forernavn(forertall: str):
     respons = requests.get(url, timeout=10)
     data = respons.json()
     forer_navn = data[0]["last_name"]
+    print("Hallo3")
     return forer_navn
      
 def hent_naaverende_pos(forertall: int):
@@ -39,6 +43,7 @@ def hent_naaverende_pos(forertall: int):
     data = respons.json()
     if len(data) > 0:
         return data[-1]["position"]
+    print("Hallo4")
     return 20
 
 def hent_raskeste_runde():
@@ -53,5 +58,6 @@ def hent_raskeste_runde():
         runder.append({"forer": runde["driver_number"], "rundetid": runde["lap_duration"]})
     
     runder_sortert = sorted(runder, key=lambda runde: runde["rundetid"])
+    print("Hallo5")
 
     return runder_sortert[0]["forer"]
