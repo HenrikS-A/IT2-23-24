@@ -12,3 +12,5 @@
 - Uke 11: [Testing + mappeinnlevering (+f1-stilling-app)](./uke11)
 - Uke 12: [Skrivedag + arbeid med mappen](./uke12/)
 - Uke 14: [Kommentarer, dokumentasjon, mappeinnlevering](./uke14/)
+- Uke 15: [PacTroll](./uke15/)
+- Uke 16: [Fortsatt på PacTroll + Oppsett og Manic Mansion](./uke16/)
