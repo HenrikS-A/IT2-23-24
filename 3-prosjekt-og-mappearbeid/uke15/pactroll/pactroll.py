@@ -1,6 +1,7 @@
 import pygame
 import random
 
+
 # Klasser
 class Spillobjekt:
     def __init__(self, x: int, y: int, tekst: str, farge: str):
@@ -18,13 +19,14 @@ class Spillobjekt:
         self.tekst_ramme.center = self.rect.center # Plasserer sentrum av tekst-ramme i sentrum til rektangelet
 
     def oppdater(self):
-        self.tekst_ramme.center = self.rect.center 
+        self.tekst_ramme.center = self.rect.center
         # for hver frame må jeg oppdatere skjermen
         # slik at tekst og figur hele tiden ligger over hverandre
 
     def tegn(self, vindu: pygame.Surface):
         vindu.blit(self.surface, self.rect)
         vindu.blit(self.tekst, self.tekst_ramme)
+
 
 class Troll(Spillobjekt):
     def __init__(self):
@@ -52,13 +54,18 @@ class Troll(Spillobjekt):
             self.rect.centery -= self.spillerfart
 
     def sjekk_posisjon(self):
-        if self.rect.left < 0 or self.rect.right > BREDDE or self.rect.top < 0 or self.rect.bottom > HOYDE:
+        if (self.rect.left < 0
+            or self.rect.right > BREDDE
+            or self.rect.top < 0
+            or self.rect.bottom > HOYDE):
             pygame.quit()
             raise SystemExit
+
 
 class Matbit(Spillobjekt):
     def __init__(self, x: int, y: int):
         super().__init__(x, y, "M", "yellow") # Matbiter skal ha bokstav "M" og fargen gul
+
 
 class Hindring(Spillobjekt):
     def __init__(self, x: int, y: int):
@@ -91,15 +98,16 @@ while True:
             pygame.quit()
             raise SystemExit
 
-        if event.type == pygame.KEYDOWN:
-            if event.key == pygame.K_RIGHT:
-                spiller.retning = 1
-            if event.key == pygame.K_DOWN:
-                spiller.retning = 2
-            if event.key == pygame.K_LEFT:
-                spiller.retning = 3
-            if event.key == pygame.K_UP:
-                spiller.retning = 4
+    ## Input fra tastatur:
+    taster = pygame.key.get_pressed()
+    if taster[pygame.K_RIGHT] or taster[pygame.K_d]:
+        spiller.retning = 1
+    if taster[pygame.K_DOWN] or taster[pygame.K_s]:
+        spiller.retning = 2
+    if taster[pygame.K_LEFT] or taster[pygame.K_a]:
+        spiller.retning = 3
+    if taster[pygame.K_UP] or taster[pygame.K_w]:
+        spiller.retning = 4
 
     # 3. Oppdater spill
     spiller.beveg()
