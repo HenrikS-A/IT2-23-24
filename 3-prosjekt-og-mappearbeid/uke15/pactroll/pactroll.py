@@ -33,8 +33,9 @@ class Troll(Spillobjekt):
         # I stedet for å velge parametere når jeg oppretter de ulike obketene,
         # velger jeg her hvilken posisjon, bokstav og farge alle spillere skal ha
         super().__init__(BREDDE//2, HOYDE//2, "T", "green")
-        self.spillerfart = 5 # Konstant fart hele tiden
+        self.spillerfart = 1
         self.retning = random.randint(1, 4) # Jeg velger en tilfeldig start-retning for spilleren.
+        self.poeng = 0
 
     def beveg(self):
 
@@ -60,11 +61,39 @@ class Troll(Spillobjekt):
             or self.rect.bottom > HOYDE):
             pygame.quit()
             raise SystemExit
+        
+    def oek_fart_og_poeng(self):
+        self.poeng += 1
+        self.spillerfart += 1
+
+    def vis_poeng(self, vindu: pygame.Surface, skjerm_bredde, skjerm_hoyde):
+        poeng_font = pygame.font.SysFont("Open Sans", 60)
+        poeng_surface = poeng_font.render(f"{self.poeng}", True, "white")
+        vindu.blit(poeng_surface, (skjerm_bredde * 94/100, skjerm_hoyde * 10/100))
 
 
 class Matbit(Spillobjekt):
     def __init__(self, x: int, y: int):
         super().__init__(x, y, "M", "yellow") # Matbiter skal ha bokstav "M" og fargen gul
+        self.matbit_koordinater = []
+    
+    # def opprett_matbitkoordinat(self, skjerm_bredde, skjerm_hoyde):
+    #     for koordinat in self.matbit_koordinater:
+    #         x_koord = koordinat[0]
+    #         y_koord = koordinat[1]
+
+    #         ny_x = random.randint(30, skjerm_bredde-30)
+    #         while abs(x_koord - ny_x) >= 35:    # For at ikke matbitene skal spawne oppå (eller nesten oppå) hverandre
+    #             ny_x = random.randint(30, skjerm_bredde-30)
+        
+    #         ny_y = random.randint(30, skjerm_hoyde-30)
+    #         while abs(y_koord - ny_y) >= 35:
+    #             ny_y = random.randint(30, skjerm_hoyde-30)
+
+    #     nytt_koordinat = (ny_x, ny_y)
+    #     self.matbit_koordinater.append(nytt_koordinat)
+
+    #     return nytt_koordinat
 
 
 class Hindring(Spillobjekt):
@@ -85,6 +114,7 @@ pygame.display.set_caption("Pactroll") # Navn på vinduet
 ## Oppsett av spill
 spiller = Troll()
 matbiter = [Matbit(random.randint(30, BREDDE-30), random.randint(30, HOYDE-30)) for _ in range(3)]
+# matbit = Matbit()
 
 hindringer: list[Hindring] = []
 tillatte_hindringer = [] # For at jeg ikke dør med en gang jeg spiser en matbit
@@ -131,6 +161,8 @@ while True:
 
                 hindringer.append(ny_hindring)
                 tillatte_hindringer.append(ny_hindring) # For at spilleren ikke dør med en gang
+
+                spiller.oek_fart_og_poeng()
     else:
         kollisjon = False # Når spiller ikke kolliderer lengre
 
@@ -150,6 +182,8 @@ while True:
 
     # 4. Tegn
     vindu.fill("black") # Fyller vinduet med sort bakgrunn for hver gang loopen kjører
+
+    spiller.vis_poeng(vindu, BREDDE, HOYDE)
 
     # Slår listene (og spiller objektet) sammen til én liste, så tegner jeg hvert objekt i lista
     for objekt in [*matbiter, *hindringer, spiller]:
