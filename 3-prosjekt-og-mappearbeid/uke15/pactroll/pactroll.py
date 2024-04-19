@@ -2,7 +2,7 @@ import pygame
 import random
 
 # Klasser
-class Objekt:
+class Spillobjekt:
     def __init__(self, x: int, y: int, tekst: str, farge: str):
         self.sidelengde = 60
         self.surface = pygame.Surface((self.sidelengde, self.sidelengde))
@@ -26,15 +26,14 @@ class Objekt:
         vindu.blit(self.surface, self.rect)
         vindu.blit(self.tekst, self.tekst_ramme)
 
-
-class Troll(Objekt):
+class Troll(Spillobjekt):
     def __init__(self):
         # I stedet for å velge parametere når jeg oppretter de ulike obketene,
         # velger jeg her hvilken posisjon, bokstav og farge alle spillere skal ha
         super().__init__(BREDDE//2, HOYDE//2, "T", "green")
         self.spillerfart = 5 # Konstant fart hele tiden
         self.retning = random.randint(1, 4) # Jeg velger en tilfeldig start-retning for spilleren.
-        
+
     def beveg(self):
 
         # Retninger:
@@ -51,22 +50,19 @@ class Troll(Objekt):
             self.rect.centerx -= self.spillerfart
         elif self.retning == 4:
             self.rect.centery -= self.spillerfart
-    
+
     def sjekk_posisjon(self):
         if self.rect.left < 0 or self.rect.right > BREDDE or self.rect.top < 0 or self.rect.bottom > HOYDE:
             pygame.quit()
             raise SystemExit
 
-
-
-class Matbit(Objekt):
+class Matbit(Spillobjekt):
     def __init__(self, x: int, y: int):
         super().__init__(x, y, "M", "yellow") # Matbiter skal ha bokstav "M" og fargen gul
 
-class Hindring(Objekt):
+class Hindring(Spillobjekt):
     def __init__(self, x: int, y: int):
         super().__init__(x, y, "H", "gray") # Hindringer skal ha bokstav "H" og fargen grå
-
 
 
 # 1. Oppsett
@@ -87,7 +83,6 @@ hindringer: list[Hindring] = []
 tillatte_hindringer = [] # For at jeg ikke dør med en gang jeg spiser en matbit
 
 kollisjon = False
-
 
 while True:
     # 2. Håndter input
@@ -112,7 +107,7 @@ while True:
     spiller.sjekk_posisjon()
 
     ## Kollisjoner:
-    
+
     # collidelisteall() sjekker hvilke rects som kolliderer og returnerer en liste med indeks-er
     kollisjoner_liste = spiller.rect.collidelistall([matbit.rect for matbit in matbiter])
     if len(kollisjoner_liste) > 0:
@@ -131,14 +126,12 @@ while True:
     else:
         kollisjon = False # Når spiller ikke kolliderer lengre
 
-
     # For hver frame, sjekker jeg om spilleren kolliderer med noen av de tillatte hindringene 
     # (sjekker alle fra lista), Hvis spilleren ikke gjør det (lenger), 
     # fjerner jeg alt fra tillatte hindringer.
     kollisjonsindeks = spiller.rect.collidelist([hindring.rect for hindring in hindringer])    
     if kollisjonsindeks == -1:
         tillatte_hindringer.clear() # Fjerner alt fra lista!
-
 
     # Hvis spiller kolliderer med hindring (som ikke er tillatt) -> avslutt spillet
     for hindring in hindringer:
