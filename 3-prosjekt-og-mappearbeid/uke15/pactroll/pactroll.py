@@ -76,24 +76,6 @@ class Matbit(Spillobjekt):
     def __init__(self, x: int, y: int):
         super().__init__(x, y, "M", "yellow") # Matbiter skal ha bokstav "M" og fargen gul
         self.matbit_koordinater = []
-    
-    # def opprett_matbitkoordinat(self, skjerm_bredde, skjerm_hoyde):
-    #     for koordinat in self.matbit_koordinater:
-    #         x_koord = koordinat[0]
-    #         y_koord = koordinat[1]
-
-    #         ny_x = random.randint(30, skjerm_bredde-30)
-    #         while abs(x_koord - ny_x) >= 35:    # For at ikke matbitene skal spawne oppå (eller nesten oppå) hverandre
-    #             ny_x = random.randint(30, skjerm_bredde-30)
-        
-    #         ny_y = random.randint(30, skjerm_hoyde-30)
-    #         while abs(y_koord - ny_y) >= 35:
-    #             ny_y = random.randint(30, skjerm_hoyde-30)
-
-    #     nytt_koordinat = (ny_x, ny_y)
-    #     self.matbit_koordinater.append(nytt_koordinat)
-
-    #     return nytt_koordinat
 
 
 class Hindring(Spillobjekt):
@@ -114,7 +96,6 @@ pygame.display.set_caption("Pactroll") # Navn på vinduet
 ## Oppsett av spill
 spiller = Troll()
 matbiter = [Matbit(random.randint(30, BREDDE-30), random.randint(30, HOYDE-30)) for _ in range(3)]
-# matbit = Matbit()
 
 hindringer: list[Hindring] = []
 tillatte_hindringer = [] # For at jeg ikke dør med en gang jeg spiser en matbit

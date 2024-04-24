@@ -56,4 +56,4 @@ class Elev:
         self.fag.remove(fagnavn)
 
 henrik = Elev("Henrik", 3, "STF")
-martin = Elev("Martin", 3, "3STE")
+martin = Elev("Martin", 3, "STE")
