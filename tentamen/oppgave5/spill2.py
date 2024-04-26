@@ -17,16 +17,16 @@ class Spillobjekt:
 class Racket(Spillobjekt):
     def __init__(self) -> None:
         super().__init__(70, 15, BREDDE//2, HOYDE*0.9)
-        self.spillerfart = 10
+        self.spillerfart = 5
         self.niva = 1
         self.poeng = 0
 
     def beveg(self, tastaturinput):
-        if tastaturinput[pygame.K_d] and self.rect.right < BREDDE:
+        if tastaturinput[pygame.K_d] and self.rect.right < BREDDE or tastaturinput[pygame.K_RIGHT] and self.rect.right < BREDDE:
             self.rect.centerx += self.spillerfart
-        if tastaturinput[pygame.K_a] and self.rect.left > 0:
+        if tastaturinput[pygame.K_a] and self.rect.left > 0 or tastaturinput[pygame.K_LEFT] and self.rect.right > 0:
             self.rect.centerx -= self.spillerfart
-    
+
     def oek_spillerniva(self):
         self.niva += 1
 
