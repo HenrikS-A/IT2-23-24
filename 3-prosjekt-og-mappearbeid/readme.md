@@ -14,3 +14,6 @@
 - Uke 14: [Kommentarer, dokumentasjon, mappeinnlevering](./uke14/)
 - Uke 15: [PacTroll](./uke15/)
 - Uke 16: [Fortsatt på PacTroll + Oppsett og Manic Mansion](./uke16/)
+- Uke 17: [Tentamenøving](./uke17/tentamenøving/)
+- Uke 17: [Tentamen](../tentamen/)
+- Uke 18: [Presentasjon og mappeinnlevering](https://github.com/HenrikS-A/IT2-mappeinnlevering)
