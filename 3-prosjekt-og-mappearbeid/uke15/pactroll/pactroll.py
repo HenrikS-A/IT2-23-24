@@ -61,18 +61,51 @@ class Spillobjekt:
 
 
 class Troll(Spillobjekt):
+    """ Representerer et troll-objekt i spillet.
+
+    Arver fra Spillobjekt og definerer troll-spesifikke egenskaper her.
+    Da legger jeg ikke inn parametere når jeg oppretter objektet, men
+    den får ulike standardverdier her.
+
+    Attributter:
+        spillerfart (int): Farten til troll-objektet.
+        retning (int): Retningen troll-objektet beveger seg i. \
+            Mulige verdier: 1 (høyre), 2 (ned), 3 (venstre), 4 (opp).
+        poeng (int): Antall poeng troll-objektet har oppnådd.
+
+    Metoder:
+        beveg(tastaturinput: pygame.key.ScancodeWrapper): Endrer retningen \
+            på trollpbjektet basert på tastaturinput.
+        sjekk_posisjon(skjerm_bredde: int, skjerm_hoyde: int): Sjekker om trollobjektet \
+            er utenfor spillvinduet og avslutter hvis det er tilfellet.
+        oek_fart_og_poeng(): Øker farten og poengsummen til troll-objektet.
+        vis_poeng(vindu: pygame.Surface, skjerm_bredde: int, skjerm_hoyde: int): Viser \
+            poengsummen til trollobjektet på spillviduet. 
+
+    """
     def __init__(self):
-        # I stedet for å velge parametere når jeg oppretter de ulike obketene,
-        # velger jeg her hvilken posisjon, bokstav og farge troll-objekter skal ha
         super().__init__(BREDDE//2, HOYDE//2, "green", "T")
+        """ Initialiserer et nytt Troll-objekt med standardverdier. 
+        
+        Jeg slipper å velge parametere når jeg oppretter de ulike objektene.
+        Her velger jeg posisjon, farge og bokstav som troll-objekter skal ha.
+        """
+
         self.spillerfart = 1
         self.retning = random.randint(1, 4) # Jeg velger en tilfeldig start-retning for spilleren.
         self.poeng = 0
 
     def beveg(self, tastaturinput: pygame.key.ScancodeWrapper):
+        """ Endrer retningen til troll-objektet basert på tastaturinput. 
+
+        Retning har de mulige verdiene: 1 (høyre), 2 (ned), 3 (venstre), 4 (opp).
+        
+        Argumenter: 
+            tastaturinput (pygame.key.ScancodeWrapper): Tastaturinput som styrer trollet.
+        """
+
         # Her endrer jeg bare retningen og ikke faktisk bevegelse
         # for at trollet ikke skal stoppe hvis spilleren slipper opp tasten
-        
         taster = tastaturinput
         if taster[pygame.K_RIGHT] or taster[pygame.K_d]:
             self.retning = 1
@@ -82,12 +115,6 @@ class Troll(Spillobjekt):
             self.retning = 3
         if taster[pygame.K_UP] or taster[pygame.K_w]:
             self.retning = 4
-        
-        # Retninger:
-        # 1 -> Høyre
-        # 2 -> Ned
-        # 3 -> Venstre
-        # 4 -> Opp
 
         if self.retning == 1:
             self.rect.centerx += self.spillerfart
@@ -98,32 +125,53 @@ class Troll(Spillobjekt):
         elif self.retning == 4:
             self.rect.centery -= self.spillerfart
 
-    def sjekk_posisjon(self):
+    def sjekk_posisjon(self, skjerm_bredde: int, skjerm_hoyde: int):
+        """ Sjekker om troll_objektet er utenfor spillvinduet og avslutter om det er tilfellet. """
         if (self.rect.left <= 0
-            or self.rect.right >= BREDDE
+            or self.rect.right >= skjerm_bredde
             or self.rect.top <= 0
-            or self.rect.bottom >= HOYDE):
+            or self.rect.bottom >= skjerm_hoyde):
             pygame.quit()
             raise SystemExit
 
     def oek_fart_og_poeng(self):
+        """ Øker farten og poengsummen til troll-objektet. """
         self.poeng += 1
         self.spillerfart += 1
 
     def vis_poeng(self, vindu: pygame.Surface, skjerm_bredde: int, skjerm_hoyde: int):
+        """ Viser poengsummen til troll-objektet på spillvinduet. 
+        
+        Argumenter:
+            vindu (pygame.Surface): Overflaten hvor poengsummen skal vises.
+            skjerm_bredde (int): Bredde på spillvinduet
+            skjerm_hoyde (int): Høyde på spillvinduet.
+        """
+
         poeng_font = pygame.font.SysFont("Open Sans", 60)
         poeng_surface = poeng_font.render(f"{self.poeng}", True, "white")
         vindu.blit(poeng_surface, (skjerm_bredde * 0.94, skjerm_hoyde * 0.10))
 
 
 class Matbit(Spillobjekt):
+    """ Representerer en matbit i spillet.
+    
+    Arver fra Spillobjekt og definerer matbit-spesifikke egenskaper.
+    """
     def __init__(self, x: int, y: int):
         super().__init__(x, y, "yellow", "M") # Matbiter skal ha bokstav "M" og fargen gul
+        """ Initialiserer en ny Matbit med standardverdier. """
 
 
 class Hindring(Spillobjekt):
+    """ Representerer en hindring i spillet.
+    
+    Arver fra Spillobjekt og definerer hindring-spesifikke egenskaper.
+    """
     def __init__(self, x: int, y: int):
         super().__init__(x, y, "gray", "H") # Hindringer skal ha bokstav "H" og fargen grå
+        """ Initialiserer en ny Hindring med standardverdier. """
+
 
 
 # 1. Oppsett
@@ -157,8 +205,11 @@ while True:
 
     # 3. Oppdater spill
     spiller.beveg(taster)
-    spiller.oppdater()
-    spiller.sjekk_posisjon()
+
+    # spiller.oppdater()
+    spiller.tekst_ramme.center = spiller.rect.center # Dette oppdaterer...
+
+    spiller.sjekk_posisjon(BREDDE, HOYDE)
 
     ## Kollisjoner:
 

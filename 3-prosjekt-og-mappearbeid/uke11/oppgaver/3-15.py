@@ -3,6 +3,7 @@ def er_skuddår(årstall: int):
     Skuddår er år som er delelige på 4 og som ikke er delelige med 100,
     med unntak for år som er delelige på 400
     """
+    
     if årstall % 400 == 0:
         return True
     if årstall % 4 == 0 and not årstall % 100 == 0:
