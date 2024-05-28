@@ -99,7 +99,7 @@ HOYDE = 720
 FPS = 60
 vindu = pygame.display.set_mode((BREDDE, HOYDE))
 klokke = pygame.time.Clock()
-pygame.display.set_caption("Breakout") # Navn på vinduet
+pygame.display.set_caption("Breakout") # Navn på vinduet 
 
 
 ## Oppsett av spill

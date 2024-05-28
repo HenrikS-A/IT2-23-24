@@ -10,4 +10,4 @@
 
 - Uke 20: [Bubble-shooter](./bubble-shooter/)
 - Uke 21: [Fysikkeksamen]
-- Uke 22: [kommer...]
+- Uke 22: [kommer...]()
