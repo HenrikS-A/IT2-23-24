@@ -23,6 +23,9 @@ def avslutt_spill():
 BREDDE = 720
 HOYDE = 720
 FPS = 60
+KOLONNER = 3
+KOLONNEBREDDE = 50
+MARG = 50
 
 
 # Oppsett av pygame
@@ -67,6 +70,14 @@ while True:
 
     # Tegn på vinduet
     vindu.fill("white") # Fyller vinduet med en bakgrunnsfarge (fjerner alt fra forrige frame)
+    
+    for i in range(KOLONNER + 1):
+        pygame.draw.line(vindu, "red", (100, 100), (100, 150))
+
+    # MARG + i * KOLONNEBREDDE, MARG
+    # MARG + i * KOLONNEBREDDE, HOYDE - MARG
+
+    
 
     pygame.display.flip() # Oppdaterer skjermen
     klokke.tick(FPS)
