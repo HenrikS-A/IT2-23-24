@@ -6,8 +6,11 @@
 - IT2 eksamen 31. mai (uke 22)
 
 
-## Ukentlig innhold
+## Ulike pygame-spill laget som forberedelse til eksamen
 
-- Uke 20: [Bubble-shooter](./bubble-shooter/)
-- Uke 21: [Fysikkeksamen]
-- Uke 22: [kommer...]()
+- [PacTroll](./pactroll/)
+- [Breakout (Tentamen)](./breakout-oppgave5-tentamen/) 
+- [Bubble-shooter (ikke ferdig i timen)](./bubble-shooter/) 
+- [Tre på rad](./tre-paa-rad/)
+- [Subway Surfers](./subway-surfers/)
+- 

@@ -50,7 +50,8 @@ for i, verdien in enumerate(topp_10_kanalantall):
     plt.text(i, verdien + 3, str(verdien), horizontalalignment="center")
 
 ## Diverse utforming
-plt.gcf().canvas.manager.set_window_title("Data visualisering (bruk fullskjerm)")
+plt.gcf().canvas.manager.set_window_title("Data visualisering (bruk fullskjerm)") # Tittel
+
 plt.title("Topp 10 land med flest YT-kanaler på topplista")
 plt.xlabel("Land")
 plt.ylabel("Antall kanaler")

@@ -1,0 +1,107 @@
+<mxfile host="Electron" modified="2024-05-01T18:48:47.703Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.2.5 Chrome/120.0.6099.109 Electron/28.1.0 Safari/537.36" etag="NzLuBn_58y_KEmYqlTto" version="24.2.5" type="device">
+  <diagram name="Page-1" id="jxHCq-29UXJGgRkWDg-y">
+    <mxGraphModel dx="1193" dy="755" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="75r6saJk0ArLQQex_pKy-1" value="Spillobjekt" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="293" y="80" width="226" height="242" as="geometry" />
+        </mxCell>
+        <mxCell id="75r6saJk0ArLQQex_pKy-2" value="+ sidelengde: int" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="75r6saJk0ArLQQex_pKy-1">
+          <mxGeometry y="26" width="226" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="75r6saJk0ArLQQex_pKy-9" value="+ surface: pygame.Surface" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="75r6saJk0ArLQQex_pKy-1">
+          <mxGeometry y="52" width="226" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="75r6saJk0ArLQQex_pKy-10" value="+ rect: pygame.Rect" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="75r6saJk0ArLQQex_pKy-1">
+          <mxGeometry y="78" width="226" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="75r6saJk0ArLQQex_pKy-11" value="+ font: pygame.font.Font" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="75r6saJk0ArLQQex_pKy-1">
+          <mxGeometry y="104" width="226" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="75r6saJk0ArLQQex_pKy-35" value="+ tekst: pygame.Surface" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="75r6saJk0ArLQQex_pKy-1">
+          <mxGeometry y="130" width="226" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="75r6saJk0ArLQQex_pKy-12" value="+ tekst_ramme: pygame.Rect" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="75r6saJk0ArLQQex_pKy-1">
+          <mxGeometry y="156" width="226" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="75r6saJk0ArLQQex_pKy-3" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="75r6saJk0ArLQQex_pKy-1">
+          <mxGeometry y="182" width="226" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="75r6saJk0ArLQQex_pKy-4" value="+ oppdater() -&amp;gt; None" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="75r6saJk0ArLQQex_pKy-1">
+          <mxGeometry y="190" width="226" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="75r6saJk0ArLQQex_pKy-15" value="+ tegn(vindu: pygame.Surface) -&amp;gt; None" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="75r6saJk0ArLQQex_pKy-1">
+          <mxGeometry y="216" width="226" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="75r6saJk0ArLQQex_pKy-5" value="Troll" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="23" y="410" width="360" height="250" as="geometry" />
+        </mxCell>
+        <mxCell id="75r6saJk0ArLQQex_pKy-6" value="+ spillerfart: int" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="75r6saJk0ArLQQex_pKy-5">
+          <mxGeometry y="26" width="360" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="75r6saJk0ArLQQex_pKy-16" value="+ retning: int" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="75r6saJk0ArLQQex_pKy-5">
+          <mxGeometry y="52" width="360" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="75r6saJk0ArLQQex_pKy-17" value="+ poeng: int" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="75r6saJk0ArLQQex_pKy-5">
+          <mxGeometry y="78" width="360" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="75r6saJk0ArLQQex_pKy-7" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="75r6saJk0ArLQQex_pKy-5">
+          <mxGeometry y="104" width="360" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="75r6saJk0ArLQQex_pKy-8" value="+ beveg(tastaturinput: pygame.key.ScancodeWrapper) -&amp;gt; None" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="75r6saJk0ArLQQex_pKy-5">
+          <mxGeometry y="112" width="360" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="75r6saJk0ArLQQex_pKy-18" value="+ sjekk_posisjon() -&amp;gt; None" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="75r6saJk0ArLQQex_pKy-5">
+          <mxGeometry y="138" width="360" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="75r6saJk0ArLQQex_pKy-19" value="+ oek_fart_og_poeng() -&amp;gt; None" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="75r6saJk0ArLQQex_pKy-5">
+          <mxGeometry y="164" width="360" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="75r6saJk0ArLQQex_pKy-20" value="+ vis_poeng(vindu: pygame.Surface,&amp;nbsp;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;skjerm_bredde: int,&amp;nbsp;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;skjerm_hoyde: int) -&amp;gt; None&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="75r6saJk0ArLQQex_pKy-5">
+          <mxGeometry y="190" width="360" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="75r6saJk0ArLQQex_pKy-21" value="Matbit" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="433" y="410" width="160" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="75r6saJk0ArLQQex_pKy-23" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="75r6saJk0ArLQQex_pKy-21">
+          <mxGeometry y="26" width="160" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="75r6saJk0ArLQQex_pKy-25" value="Hindring" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="643" y="410" width="160" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="75r6saJk0ArLQQex_pKy-26" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="75r6saJk0ArLQQex_pKy-25">
+          <mxGeometry y="26" width="160" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="75r6saJk0ArLQQex_pKy-28" value="" style="endArrow=block;endSize=16;endFill=0;html=1;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="1" source="75r6saJk0ArLQQex_pKy-5" target="75r6saJk0ArLQQex_pKy-1">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="213" y="350" as="sourcePoint" />
+            <mxPoint x="493" y="330" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="203" y="360" />
+              <mxPoint x="406" y="360" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="75r6saJk0ArLQQex_pKy-33" value="" style="endArrow=none;html=1;rounded=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" target="75r6saJk0ArLQQex_pKy-25">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="363" y="360" as="sourcePoint" />
+            <mxPoint x="723" y="390" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="723" y="360" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="75r6saJk0ArLQQex_pKy-34" value="" style="endArrow=none;html=1;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="1" source="75r6saJk0ArLQQex_pKy-21">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="493" y="430" as="sourcePoint" />
+            <mxPoint x="353" y="360" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="513" y="360" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
