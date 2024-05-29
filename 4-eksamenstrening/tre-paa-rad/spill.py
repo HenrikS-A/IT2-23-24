@@ -99,7 +99,7 @@ while True:
 
 
     # Tegn
-    
+    vindu.fill("white") # Fyller vinduet med en bakgrunnsfarge (fjerner alt fra forrige frame)
 
     brett.tegn(vindu)
     for celle in celler:
@@ -117,7 +117,5 @@ while True:
         vinner_tekst = font.render(f"Spiller {vinner} vant!", True, "black") # Oppretter tekst
         vindu.blit(vinner_tekst, (BREDDE//2 - vinner_tekst.get_width()//2, HOYDE//2 - vinner_tekst.get_height()//2)) # Tegner teksten i midten av x-posisjon og 10% ned fra toppen
 
-
-    vindu.fill("white") # Fyller vinduet med en bakgrunnsfarge (fjerner alt fra forrige frame)
     pygame.display.flip() # Oppdaterer skjermen
     klokke.tick(FPS)
