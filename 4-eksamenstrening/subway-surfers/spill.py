@@ -2,7 +2,7 @@ import pygame
 
 # Klasser
 class Spillobjekt:
-    def __init__(self, sidelengde: int, farge: str, x: int, y: int):
+    def __init__(self, sidelengde: int, x: int, y: int, farge: str):
         self.surface = pygame.Surface((sidelengde, sidelengde))
         self.rect = self.surface.get_rect()
         self.rect.center = (x, y)
@@ -10,6 +10,30 @@ class Spillobjekt:
 
     def tegn(self, surface: pygame.Surface):
         surface.blit(self.surface, self.rect)
+
+class Spiller(Spillobjekt):
+    def __init__(self):
+        self.x = BREDDE//2 # Dette er startverdien til x-posisjonen
+        super().__init__(KOLONNEBREDDE//2, self.x, HOYDE - 100, "darkgreen")
+        self.posisjon = 1
+    
+    def beveg(self, tastaturinput: int):
+            if self.posisjon == 0:
+                if tastaturinput == pygame.K_RIGHT:
+                    self.rect.centerx += KOLONNEBREDDE
+                    self.posisjon = 1
+            elif self.posisjon == 1:
+                if tastaturinput == pygame.K_LEFT:
+                    self.rect.centerx -= KOLONNEBREDDE
+                    self.posisjon = 0
+                if tastaturinput == pygame.K_RIGHT:
+                    self.rect.centerx += KOLONNEBREDDE
+                    self.posisjon = 2
+            elif self.posisjon == 2:
+                if tastaturinput == pygame.K_LEFT:
+                    self.rect.centerx -= KOLONNEBREDDE
+                    self.posisjon = 1
+
 
 
 # Funksjoner
@@ -20,12 +44,13 @@ def avslutt_spill():
 
 
 # Konstanter
-BREDDE = 720
+BREDDE = 500
 HOYDE = 720
 FPS = 60
 KOLONNER = 3
-KOLONNEBREDDE = 50
 MARG = 50
+KOLONNELINJEBREDDE = 5
+KOLONNEBREDDE = (BREDDE - 2*MARG) // KOLONNER
 
 
 # Oppsett av pygame
@@ -36,7 +61,9 @@ pygame.display.set_caption("Subway Surfers") # Navn på vinduet
 
 
 # Oppsett av spill
-objekt = Spillobjekt(100, "green", 100, 100)
+spilleren = Spiller()
+
+blir_trykket = False
 
 
 # Gameloop
@@ -46,13 +73,13 @@ while True:
     for hendelse in hendelser:
         if hendelse.type == pygame.QUIT:
             avslutt_spill()
-        
-    # Input fra tastatur:
-    taster = pygame.key.get_pressed()
-    if taster[pygame.K_UP]:
-        print("Du trykker på 'Pil opp'.")
-    if taster[pygame.K_s]:
-        print("Du trykker på 's'.")
+
+        # Input fra tastatur
+        if hendelse.type == pygame.KEYDOWN:
+            spilleren.beveg(hendelse.key)
+
+    
+    
 
     # Input fra mus
     mus_posisjon = pygame.mouse.get_pos()
@@ -65,19 +92,17 @@ while True:
 
     # Oppdater spill
 
-    # Spillogikk (oppdater fart, sjekk kollisjoner osv.)
+
 
 
     # Tegn på vinduet
     vindu.fill("white") # Fyller vinduet med en bakgrunnsfarge (fjerner alt fra forrige frame)
-    
+
+    ## Tegner kolonnene til spillet
     for i in range(KOLONNER + 1):
-        pygame.draw.line(vindu, "red", (100, 100), (100, 150))
+        pygame.draw.line(vindu, "darkgray", (MARG + i * KOLONNEBREDDE, 2*MARG), (MARG + i * KOLONNEBREDDE, HOYDE - MARG), KOLONNELINJEBREDDE)
 
-    # MARG + i * KOLONNEBREDDE, MARG
-    # MARG + i * KOLONNEBREDDE, HOYDE - MARG
-
-    
+    spilleren.tegn(vindu)
 
     pygame.display.flip() # Oppdaterer skjermen
     klokke.tick(FPS)
