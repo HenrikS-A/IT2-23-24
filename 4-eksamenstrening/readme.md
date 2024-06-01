@@ -12,5 +12,5 @@
 - [Breakout (Tentamen)](./breakout-oppgave5-tentamen/) 
 - [Bubble-shooter (ikke ferdig i timen)](./bubble-shooter/) 
 - [Tre på rad](./tre-paa-rad/)
-- [Subway Surfers](./subway-surfers/)
-- 
+- [Subway Surfers (ikke helt ferdig)](./subway-surfers/)
+

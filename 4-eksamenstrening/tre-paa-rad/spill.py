@@ -16,7 +16,7 @@ class Celle(Spillobjekt):
         super().__init__(180, "white", x, y)
         self.ingen_eier = True
 
-    def trykk(self, muspos: tuple[int, int], tur: int) -> int:
+    def trykk(self, muspos: tuple[int, int], tur: int):
         if self.ingen_eier and self.rect.collidepoint(muspos):
                 self.ingen_eier = False
                 if tur == 0:
