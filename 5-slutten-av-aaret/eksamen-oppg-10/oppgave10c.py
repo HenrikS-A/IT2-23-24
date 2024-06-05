@@ -53,8 +53,9 @@ class Celle:
         for i in range(rad-1, rad+2):
             for j in range(kolonne-1, kolonne+2):
                 # Her sjekker jeg at jeg holder meg innenfor celle-koordinatsystemet 
-                # og at egen plassering ikke registres som en naboplassering
-                if i >= 0 and i < rader and j >= 0 and j < kolonner and i != rad and j != kolonne:
+                # og at egen plassering ikke registres som en naboplassering - da må altså 
+                # maks én av koordinatene være lik input koordinatene
+                if i >= 0 and i < rader and j >= 0 and j < kolonner and (i != rad or j != kolonne):
                     naboer.append(celleliste[i][j])
 
         self.naboer = naboer
@@ -114,6 +115,7 @@ for i, nostet_liste in enumerate(nostet_celleliste):
     for j, celle in enumerate(nostet_liste):
         kolonne = j
         celle.finn_naboer(nostet_celleliste, rad, kolonne)
+        pass
 
 ## Legger alle cellene i en flat celle-liste
 celler = []
