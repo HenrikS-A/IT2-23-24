@@ -98,7 +98,7 @@ pygame.display.set_caption("Livets spill") # Navn på vinduet
 
 
 # Oppsett av spill
-nostet_celleliste: list[Celle] = []
+celler: list[Celle] = []
 antall_horisontalt = (BREDDE-MARG)//(CELLE_BREDDE+CELLE_AVSTAND)
 antall_vertikalt = (HOYDE-MARG)//(CELLE_BREDDE+CELLE_AVSTAND)
 
@@ -107,20 +107,22 @@ for i in range(antall_vertikalt):
     liste = []
     for j in range(antall_horisontalt):
         liste.append(Celle(MARG + (CELLE_BREDDE+CELLE_AVSTAND)*j, MARG + (CELLE_BREDDE+CELLE_AVSTAND)*i))
-    nostet_celleliste.append(liste)
+    celler.append(liste)
 
 ## Finner naboene til hver celle (kanskje er det noe feil her.)
-for i, nostet_liste in enumerate(nostet_celleliste):
+for i, nostet_liste in enumerate(celler):
     rad = i
     for j, celle in enumerate(nostet_liste):
         kolonne = j
-        celle.finn_naboer(nostet_celleliste, rad, kolonne)
+        celle.finn_naboer(celler, rad, kolonne)
         pass
+    pass
+pass
 
 ## Legger alle cellene i en flat celle-liste
-celler = []
-for liste in nostet_celleliste:
-    celler.extend(liste)
+# celler = []
+# for liste in nostet_celleliste:
+#     celler.extend(liste)
 
 
 ny_generasjon_teller = 60 # Jeg har 60fps, så hvert sekund er en ny generasjon.
@@ -136,39 +138,62 @@ while True:
         # Mus-klikk
         if hendelse.type == pygame.MOUSEBUTTONDOWN: # Sjekker bare én gang når musen klikkes NED
             mus_posisjon = pygame.mouse.get_pos()
-            for celle in celler:
-                celle.trykk(mus_posisjon)
+            for celleliste in celler:
+                for celle in celleliste:
+                    celle.trykk(mus_posisjon)
 
     # Input fra tastatur:
     taster = pygame.key.get_pressed()
     if taster[pygame.K_SPACE]:
-        for celle in celler:
-            celle.drep()
-            ny_generasjon_teller = 300 # Du har 5 sekunder på å plassere ut ting etter å ha drept alle.
+        for celleliste in celler:
+            for celle in celleliste:
+        
+                celle.drep()
+                ny_generasjon_teller = 300 # Du har 5 sekunder på å plassere ut ting etter å ha drept alle.
 
 
     # Oppdater spill
-    for celle in celler:
-        celle.oppdater_celle()
+    for celleliste in celler:
+        for celle in celleliste:
+            celle.oppdater_celle()
     ny_generasjon_teller -= 1
 
+
+
+
+    ## Finner naboene til hver celle (kanskje er det noe feil her.)
+    for i, nostet_liste in enumerate(celler):
+        rad = i
+        for j, celle in enumerate(nostet_liste):
+            kolonne = j
+            celle.finn_naboer(celler, rad, kolonne)
+            pass
+
+
+
+
+
     if ny_generasjon_teller <= 0:
-        for celle in celler:
-            celle.ny_generasjon()
+        for celleliste in celler:
+            for celle in celleliste:
+                celle.ny_generasjon()
     
         ny_generasjon_teller = 60 # Resetter nedtellingen til neste generasjon
 
         # Her fungerer ikke ting.
-        for celle in celler:
-            if celle.skal_endre_livsstatus:
-                celle.endre_livsstatus()
+        for celleliste in celler:
+            for celle in celleliste:
+                if celle.skal_endre_livsstatus:
+                    celle.endre_livsstatus()
+
     
 
     # Tegn på vinduet
     vindu.fill("gray") # Fyller vinduet med en bakgrunnsfarge (fjerner alt fra forrige frame)
 
-    for celle in celler:
-        celle.tegn(vindu)
+    for celleliste in celler:
+        for celle in celleliste:
+            celle.tegn(vindu)
 
     pygame.display.flip() # Oppdaterer skjermen
     klokke.tick(FPS)
